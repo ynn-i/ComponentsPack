@@ -102,6 +102,7 @@ export const ComponentsGrid = styled.div`
   position: relative;
   flex-shrink: 0;
   width: 100%;
+    box-sizing : border-box;
 
   &::before {
     content: '';
@@ -133,6 +134,7 @@ export const ComponentRow = styled.div`
   position: relative;
   flex-shrink: 0;
   width: 100%;
+  box-sizing : border-box;
 
   @media (max-width: 768px) {
     flex-direction: column;

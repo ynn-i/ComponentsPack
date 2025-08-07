@@ -34,18 +34,17 @@ const GlobalStyles = createGlobalStyle`
   h5 { font-size: 1.25rem; }
   h6 { font-size: 1rem; }
 
-  --------
-
   /* custom */
   .box {
-    background-color : #000000 !important;
-    display : flex;
     padding : 40px;
-    margin : 0 auto;
-    min-width : 240px;
     width : 100%;
     min-height : 200px;
     height : 100%
+    box-sizing : border-box;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    border : 1px solid #000000;
   }
 
 

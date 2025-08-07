@@ -101,7 +101,7 @@ function App() {
                 </ComponentTitle>
 
                 {/* Numbers Row - Component Examples */}
-                <ComponentRowContainer id='node-243_402'>
+                <div className="box">
                   <Radio.Group
                     name='radio-demo'
                     value={selectedRadio}
@@ -109,47 +109,22 @@ function App() {
                   >
                     <Radio value='option1' label='1-10' />
                   </Radio.Group>
-                </ComponentRowContainer>
+                </div>
 
                 {/* States Row */}
                 <ComponentRowContainer id='node-243_405'>
-                  <Radio.Group
-                    name='radio-states'
-                    value={selectedRadio}
-                    onChange={setSelectedRadio}
-                  >
-                    <Radio value='default' label='default' />
-                    <Radio value='hover' label='hover' />
-                    <Radio value='active' label='active' />
-                    <Radio value='focus' label='focus' />
-                    <Radio value='disabled' label='disabled' disabled />
-                  </Radio.Group>
-                </ComponentRowContainer>
-
-                {/* Variants Row */}
-                <ComponentRowContainer id='node-243_416'>
-                  <Radio.Group
-                    name='radio-variants'
-                    value={selectedRadio}
-                    onChange={setSelectedRadio}
-                  >
-                    <Radio value='fill' label='fill' />
-                    <Radio value='ghost' label='ghost' />
-                    <Radio value='disabled' label='disabled' disabled />
-                  </Radio.Group>
+                     <Button variant='ghost' size='small'>default</Button>
+                     <Button variant='ghost' size='small'>hover</Button>
+                     <Button variant='ghost' size='small'>active</Button>
+                     <Button variant='ghost' size='small'>focus</Button>
+                     <Button variant='ghost' size='small'>disabled</Button>
                 </ComponentRowContainer>
 
                 {/* Sizes Row */}
                 <ComponentRowContainer id='node-243_423'>
-                  <Radio.Group
-                    name='radio-sizes'
-                    value={selectedRadio}
-                    onChange={setSelectedRadio}
-                  >
-                    <Radio value='small' label='small' size='small' />
-                    <Radio value='medium' label='medium' size='medium' />
-                    <Radio value='large' label='large' size='large' />
-                  </Radio.Group>
+                <Button variant='ghost' size='small'>small</Button>
+                <Button variant='ghost' size='small'>medium</Button>
+                <Button variant='ghost' size='small'>large</Button>
                 </ComponentRowContainer>
               </ComponentColumn>
 
@@ -160,47 +135,45 @@ function App() {
                 </ComponentTitle>
 
                 {/* Numbers Row - Component Examples */}
-                <ComponentRowContainer id='node-243_432'>
+                <div className="box">
                   <Input placeholder='1-10' size='medium' />
-                </ComponentRowContainer>
+                </div>
 
                 {/* States Row */}
-                <ComponentRowContainer id='node-243_435'>
-                  <Input placeholder='default' size='medium' />
-                  <Input
-                    placeholder='hover'
-                    size='medium'
-                    className='hover:border-blue-400'
-                  />
-                  <Input
-                    placeholder='active'
-                    size='medium'
-                    className='active:border-blue-600'
-                  />
-                  <Input
-                    placeholder='focus'
-                    size='medium'
-                    className='focus:border-blue-500'
-                  />
-                  <Input placeholder='disabled' size='medium' disabled />
+                <ComponentRowContainer id='node-243_378'>
+                  <Button variant='ghost' size='small'>
+                  default
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  active
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  hover
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  focus
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  disabled
+                  </Button>
                 </ComponentRowContainer>
 
-                {/* Variants Row */}
-                <ComponentRowContainer id='node-243_446'>
-                  <Input placeholder='fill' size='medium' />
-                  <Input
-                    placeholder='ghost'
-                    size='medium'
-                    className='bg-transparent'
-                  />
-                  <Input placeholder='disabled' size='medium' disabled />
-                </ComponentRowContainer>
-
-                {/* Sizes Row */}
-                <ComponentRowContainer id='node-243_453'>
-                  <Input placeholder='small' size='small' />
-                  <Input placeholder='medium' size='medium' />
-                  <Input placeholder='large' size='large' />
+                <ComponentRowContainer id='node-243_378'>
+                  <Button variant='ghost' size='small'>
+                    fill
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    ghost
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    small
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    medium
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    large
+                  </Button>
                 </ComponentRowContainer>
               </ComponentColumn>
 
@@ -211,7 +184,7 @@ function App() {
                 </ComponentTitle>
 
                 {/* Numbers Row - Component Examples */}
-                <ComponentRowContainer id='node-243_462'>
+                <div className="box">
                   <ToggleSwitch>
                     <input
                       type='checkbox'
@@ -221,73 +194,44 @@ function App() {
                     <ToggleSlider className='toggle-slider' />
                     <span>1-10</span>
                   </ToggleSwitch>
-                </ComponentRowContainer>
+                </div>
 
                 {/* States Row */}
                 <ComponentRowContainer id='node-243_465'>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider' />
-                    <span>default</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider' />
-                    <span>hover</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider' />
-                    <span>active</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider' />
-                    <span>focus</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' disabled />
-                    <ToggleSlider className='toggle-slider' />
-                    <DisabledText>disabled</DisabledText>
-                  </ToggleSwitch>
+                  <Button variant='ghost' size='small'>
+                  default
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  active
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  hover
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  focus
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                  disabled
+                  </Button>
                 </ComponentRowContainer>
 
                 {/* Variants Row */}
-                <ComponentRowContainer id='node-243_476'>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider toggle-fill' />
-                    <span>fill</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider toggle-ghost' />
-                    <span>ghost</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' disabled />
-                    <ToggleSlider className='toggle-slider' />
-                    <DisabledText>disabled</DisabledText>
-                  </ToggleSwitch>
-                </ComponentRowContainer>
-
-                {/* Sizes Row */}
-                <ComponentRowContainer id='node-243_483'>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider toggle-small' />
-                    <span>small</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider toggle-medium' />
-                    <span>medium</span>
-                  </ToggleSwitch>
-                  <ToggleSwitch>
-                    <input type='checkbox' />
-                    <ToggleSlider className='toggle-slider toggle-large' />
-                    <span>large</span>
-                  </ToggleSwitch>
+                <ComponentRowContainer id='node-243_378'>
+                  <Button variant='ghost' size='small'>
+                    fill
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    ghost
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    small
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    medium
+                  </Button>
+                  <Button variant='ghost' size='small'>
+                    large
+                  </Button>
                 </ComponentRowContainer>
               </ComponentColumn>
             </ComponentRow>

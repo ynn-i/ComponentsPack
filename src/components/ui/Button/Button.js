@@ -11,7 +11,7 @@ const variantStyles = {
     }
 
     &:active:not(:disabled) {
-      background-color: rgba(255, 0, 208, 0.6);
+      background-color:  #000000;
     }
   `,
   secondary: css`
