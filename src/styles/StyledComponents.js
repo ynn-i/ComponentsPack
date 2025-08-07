@@ -81,7 +81,7 @@ export const HeaderSubtitle = styled.div`
 
   p {
     display: block;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   @media (max-width: 768px) {
@@ -162,7 +162,6 @@ export const ComponentColumn = styled.div`
 export const ComponentTitle = styled.div`
   font-family: 'Pretendard', sans-serif;
   font-weight: 600;
-  line-height: 0;
   font-style: normal;
   position: relative;
   flex-shrink: 0;
@@ -173,8 +172,8 @@ export const ComponentTitle = styled.div`
 
   p {
     display: block;
-    line-height: 0;
     white-space: pre;
+    margin: 0;
   }
 `;
 

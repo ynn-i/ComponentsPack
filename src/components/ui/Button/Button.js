@@ -11,7 +11,7 @@ const variantStyles = {
     }
 
     &:active:not(:disabled) {
-      background-color: #222222;
+      background-color: rgba(255, 0, 208, 0.6);
     }
   `,
   secondary: css`
@@ -62,7 +62,7 @@ const variantStyles = {
 
     &:active:not(:disabled) {
       background-color: #transparent;
-      border-color: #222222;
+      border-color: rgba(255, 0, 208, 0.6);
     }
   `,
 };
@@ -99,7 +99,7 @@ const StyledButton = styled.button`
     'Roboto',
     sans-serif;
   font-weight: 500;
-  transition: all 0.2s ease-in-out;
+  // transition: all 0.1s ease-in-out;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -114,7 +114,8 @@ const StyledButton = styled.button`
 
   /* focus 상태 */
   &:focus {
-    outline: 4px solid rgba(247, 0, 255, 0.2);
+    border: 1px solid rgba(255, 0, 208, 0.6);
+    outline: 4px solid rgba(255, 0, 208, 0.1);
     outline-offset: 0px;
   }
 

@@ -16,13 +16,13 @@ const GlobalStyles = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.3;
+    color: #222;
   }
 
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 1rem 0;
+    margin: 0;
     font-weight: 600;
     line-height: 1.2;
   }
@@ -34,9 +34,20 @@ const GlobalStyles = createGlobalStyle`
   h5 { font-size: 1.25rem; }
   h6 { font-size: 1rem; }
 
-  p {
-    margin: 0 0 1rem 0;
+  --------
+
+  /* custom */
+  .box {
+    background-color : #000000 !important;
+    display : flex;
+    padding : 40px;
+    margin : 0 auto;
+    min-width : 240px;
+    width : 100%;
+    min-height : 200px;
+    height : 100%
   }
+
 
   /* Links */
   a {
@@ -52,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* Lists */
   ul, ol {
-    margin: 0 0 1rem 0;
+    margin: 0;
     padding-left: 1.5rem;
   }
 

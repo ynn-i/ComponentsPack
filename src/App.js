@@ -49,11 +49,11 @@ function App() {
                 </ComponentTitle>
 
                 {/* Numbers Row - Component Examples */}
-                <ComponentRowContainer id='node-243_354'>
+                <div className="box">
                   <Button variant='primary' size='medium'>
                     1-10
                   </Button>
-                </ComponentRowContainer>
+                </div>
 
                 {/* States Row */}
                 <ComponentRowContainer id='node-243_365'>
@@ -82,13 +82,13 @@ function App() {
                   <Button variant='ghost' size='small'>
                     ghost
                   </Button>
-                  <Button variant='primary' size='small'>
+                  <Button variant='ghost' size='small'>
                     small
                   </Button>
-                  <Button variant='primary' size='medium'>
+                  <Button variant='ghost' size='small'>
                     medium
                   </Button>
-                  <Button variant='primary' size='large'>
+                  <Button variant='ghost' size='small'>
                     large
                   </Button>
                 </ComponentRowContainer>
