@@ -95,14 +95,14 @@ export const ComponentsGrid = styled.div`
   align-content: stretch;
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 40px;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 80px;
   position: relative;
   flex-shrink: 0;
   width: 100%;
-    box-sizing : border-box;
+  box-sizing : border-box;
 
   &::before {
     content: '';
@@ -113,7 +113,7 @@ export const ComponentsGrid = styled.div`
   }
 
   @media (max-width: 1920px) {
-    padding: 40px 20px;
+    padding: 80px;
   }
 
   @media (max-width: 768px) {
@@ -122,12 +122,12 @@ export const ComponentsGrid = styled.div`
 `;
 
 // Component Row
-export const ComponentRow = styled.div`
+export const ComponentRow = styled.div`s
   box-sizing: border-box;
   align-content: stretch;
   display: flex;
   flex-direction: row;
-  gap: 13px;
+  gap: 20px;
   align-items: center;
   justify-content: flex-start;
   padding: 0;
@@ -149,7 +149,7 @@ export const ComponentColumn = styled.div`
   align-content: stretch;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
   align-items: flex-start;
   justify-content: flex-start;
   min-height: 1px;

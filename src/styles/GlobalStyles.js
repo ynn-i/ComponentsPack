@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
   .box {
     padding : 40px;
     width : 100%;
-    min-height : 200px;
+    min-height : 160px;
     height : 100%
     box-sizing : border-box;
     display : flex;
