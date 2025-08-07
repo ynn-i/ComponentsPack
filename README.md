@@ -1,202 +1,169 @@
-# Component Library
+# ComponentsPack - React Component Library
 
-A comprehensive React component library with a well-organized file structure and reusable components.
+A comprehensive React component library built with **styled-components** for modern web applications.
 
-## 🏗️ Project Structure
+## 🚀 Features
+
+- **Styled Components**: All styling is implemented using styled-components for better maintainability and component encapsulation
+- **Responsive Design**: Mobile-first approach with responsive breakpoints
+- **Accessibility**: ARIA attributes and keyboard navigation support
+- **TypeScript Ready**: Components are designed to work seamlessly with TypeScript
+- **Customizable**: Extensive prop-based customization options
+
+## 📁 Project Structure
 
 ```
 src/
 ├── components/
-│   ├── ui/              # Basic UI components
-│   │   ├── Button/
-│   │   │   ├── Button.js
-│   │   │   ├── Button.css
-│   │   │   └── index.js
-│   │   ├── Input/
-│   │   │   ├── Input.js
-│   │   │   ├── Input.css
-│   │   │   └── index.js
-│   │   ├── Radio/
-│   │   │   ├── Radio.js
-│   │   │   ├── Radio.css
-│   │   │   └── index.js
-│   │   └── index.js
-│   ├── common/          # Common components
-│   │   ├── Header/
-│   │   │   ├── Header.js
-│   │   │   ├── Header.css
-│   │   │   └── index.js
-│   │   ├── Footer/
-│   │   │   ├── Footer.js
-│   │   │   ├── Footer.css
-│   │   │   └── index.js
-│   │   └── index.js
-│   ├── forms/           # Form-related components
-│   │   ├── Form.js
-│   │   ├── Form.css
-│   │   └── index.js
-│   └── index.js
-├── hooks/               # Custom hooks
-│   ├── useForm.js
-│   ├── useLocalStorage.js
-│   └── index.js
-├── utils/               # Utility functions
-│   ├── validation.js
-│   ├── helpers.js
-│   └── index.js
-├── styles/              # Global styles
-│   ├── global.css
-│   └── index.js
-├── App.js
-├── App.css
-└── index.js
+│   ├── ui/                    # Basic UI components
+│   │   ├── Button/           # Button component with variants
+│   │   ├── Input/            # Input component with validation
+│   │   └── Radio/            # Radio component with group support
+│   ├── common/               # Common components
+│   │   ├── Header/           # Header component
+│   │   └── Footer/           # Footer component
+│   └── forms/                # Form-related components
+│       └── Form/             # Form wrapper component
+├── hooks/                    # Custom React hooks
+│   ├── useForm.js           # Form state management
+│   └── useLocalStorage.js   # Local storage management
+├── utils/                    # Utility functions
+│   ├── validation.js        # Validation helpers
+│   └── helpers.js           # General utility functions
+└── styles/                   # Global styles and styled components
+    ├── GlobalStyles.js      # Global styles using styled-components
+    ├── StyledComponents.js  # Layout and component-specific styles
+    └── index.js             # Style exports
 ```
 
-## 🚀 Getting Started
+## 🎨 Styling System
 
-### Installation
+This project uses **styled-components** for all styling:
 
-```bash
-npm install
-```
+- **GlobalStyles**: Reset, typography, utilities, and responsive design
+- **Component Styles**: Each component has its own styled-components
+- **Theme Support**: Consistent design tokens and color palette
+- **Responsive**: Mobile-first responsive design
 
-### Development
-
-```bash
-npm start
-```
-
-The app will open at [http://localhost:3000](http://localhost:3000).
-
-## 📦 Components
+## 🧩 Components
 
 ### UI Components
 
 #### Button
-A versatile button component with multiple variants and sizes.
-
 ```jsx
-import { Button } from './components';
+import { Button } from './components/ui';
 
-<Button variant="primary" size="medium">Click me</Button>
+<Button variant="primary" size="medium" onClick={handleClick}>
+  Click me
+</Button>
 ```
 
 **Props:**
-- `variant`: `primary`, `secondary`, `success`, `danger`, `outline`
-- `size`: `small`, `medium`, `large`
+- `variant`: 'primary' | 'secondary' | 'success' | 'danger' | 'outline'
+- `size`: 'small' | 'medium' | 'large'
 - `disabled`: boolean
 - `onClick`: function
-- `type`: `button`, `submit`, `reset`
 
 #### Input
-A form input component with label, error handling, and validation.
-
 ```jsx
-import { Input } from './components';
+import { Input } from './components/ui';
 
-<Input
+<Input 
   label="Email"
   type="email"
   placeholder="Enter your email"
-  error={emailError}
   required
+  error="Invalid email"
 />
 ```
 
 **Props:**
-- `type`: input type
-- `label`: input label
-- `error`: error message
+- `type`: string (default: 'text')
+- `label`: string
+- `placeholder`: string
+- `value`: string
+- `onChange`: function
+- `error`: string
 - `required`: boolean
-- `size`: `small`, `medium`, `large`
 - `disabled`: boolean
+- `size`: 'small' | 'medium' | 'large'
 
 #### Radio
-A radio button component with group functionality.
-
 ```jsx
-import { Radio } from './components';
+import { Radio } from './components/ui';
 
-<Radio.Group name="gender" value={gender} onChange={setGender}>
-  <Radio value="male" label="Male" />
-  <Radio value="female" label="Female" />
+<Radio.Group name="options" value={selected} onChange={setSelected}>
+  <Radio value="option1" label="Option 1" />
+  <Radio value="option2" label="Option 2" />
 </Radio.Group>
 ```
+
+**Props:**
+- `name`: string
+- `value`: string
+- `checked`: boolean
+- `onChange`: function
+- `label`: string
+- `disabled`: boolean
+- `size`: 'small' | 'medium' | 'large'
 
 ### Common Components
 
 #### Header
-A reusable header component.
-
 ```jsx
-import { Header } from './components';
+import { Header } from './components/common';
 
 <Header 
   title="My App" 
-  subtitle="Welcome to the application" 
+  subtitle="Welcome to our application" 
 />
 ```
 
 #### Footer
-A reusable footer component with links.
-
 ```jsx
-import { Footer } from './components';
+import { Footer } from './components/common';
 
 <Footer 
   copyright="© 2024 My App"
   links={[
-    { text: 'About', href: '/about' },
-    { text: 'Contact', href: '/contact', external: true }
+    { text: 'Privacy', href: '/privacy' },
+    { text: 'Terms', href: '/terms', external: true }
   ]}
 />
 ```
 
-### Form Components
-
 #### Form
-A form wrapper component with built-in styling.
-
 ```jsx
-import { Form } from './components';
+import { Form } from './components/forms';
 
 <Form 
   title="Contact Form"
-  description="Send us a message"
+  description="Please fill out the form below"
   onSubmit={handleSubmit}
 >
-  {/* Form fields */}
+  <Input label="Name" required />
+  <Form.Actions>
+    <Button type="submit">Submit</Button>
+  </Form.Actions>
 </Form>
 ```
 
-## 🎣 Custom Hooks
+## 🪝 Custom Hooks
 
 ### useForm
-A custom hook for form state management and validation.
-
 ```jsx
 import { useForm } from './hooks';
 
-const { values, errors, handleChange, validateForm } = useForm({
-  name: '',
-  email: ''
-});
-
-const handleSubmit = () => {
-  const isValid = validateForm({
-    name: { required: 'Name is required' },
-    email: { required: 'Email is required' }
-  });
-  
-  if (isValid) {
-    // Submit form
+const { values, errors, handleChange, handleBlur, validateForm } = useForm({
+  initialValues: { email: '', password: '' },
+  validationRules: {
+    email: ['required', 'email'],
+    password: ['required', 'minLength:8']
   }
-};
+});
 ```
 
 ### useLocalStorage
-A custom hook for localStorage management.
-
 ```jsx
 import { useLocalStorage } from './hooks';
 
@@ -206,70 +173,64 @@ const [user, setUser] = useLocalStorage('user', null);
 ## 🛠️ Utilities
 
 ### Validation
-Pre-built validation functions and regex patterns.
-
 ```jsx
-import { validateEmail, validateRequired, EMAIL_REGEX } from './utils';
+import { validateEmail, validateRequired } from './utils/validation';
 
-const emailError = validateEmail(email);
-const nameError = validateRequired(name, 'Name');
+const isValid = validateEmail('test@example.com');
+const isRequired = validateRequired('some value');
 ```
 
 ### Helpers
-Common utility functions.
-
 ```jsx
-import { 
-  generateId, 
-  formatDate, 
-  capitalize, 
-  debounce 
-} from './utils';
+import { formatDate, debounce, generateId } from './utils/helpers';
 
-const id = generateId();
 const formattedDate = formatDate(new Date());
-const title = capitalize('hello world');
-const debouncedSearch = debounce(searchFunction, 300);
+const debouncedFunction = debounce(myFunction, 300);
+const uniqueId = generateId();
 ```
 
-## 🎨 Styling
+## 🚀 Getting Started
 
-The project includes:
-- Global CSS reset and base styles
-- Utility classes for spacing, typography, and layout
-- Responsive design utilities
-- Accessibility-focused styles
-- Component-specific CSS modules
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start development server:**
+   ```bash
+   npm start
+   ```
+
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
 ## 📱 Responsive Design
 
-All components are built with responsive design in mind and include:
-- Mobile-first approach
-- Flexible layouts
-- Touch-friendly interactions
-- Proper viewport handling
+The component library is built with a mobile-first approach:
+
+- **Desktop**: 1200px and above
+- **Tablet**: 768px - 1199px
+- **Mobile**: Below 768px
 
 ## ♿ Accessibility
 
-Components include:
-- Proper ARIA labels and roles
+- Semantic HTML elements
+- ARIA attributes where needed
 - Keyboard navigation support
 - Focus management
 - Screen reader compatibility
-- Color contrast compliance
 
-## 🧪 Testing
+## 🎯 Best Practices
 
-```bash
-npm test
-```
-
-## 📦 Build
-
-```bash
-npm run build
-```
+- Use semantic HTML
+- Implement proper error handling
+- Follow React best practices
+- Maintain consistent naming conventions
+- Write clean, readable code
+- Test components thoroughly
 
 ## 📄 License
 
-MIT License
+MIT License - feel free to use this component library in your projects!

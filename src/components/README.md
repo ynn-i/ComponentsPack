@@ -132,6 +132,7 @@ import { Radio } from './components';
 ## Styling
 
 All components use CSS classes for styling and support:
+
 - Consistent design system
 - Responsive design
 - Focus states for accessibility
@@ -142,6 +143,7 @@ All components use CSS classes for styling and support:
 ## Accessibility
 
 Components include:
+
 - Proper ARIA labels
 - Keyboard navigation support
 - Focus management

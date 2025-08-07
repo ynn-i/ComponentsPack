@@ -9,9 +9,9 @@ export const formatDate = (date, options = {}) => {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-    ...options
+    ...options,
   };
-  
+
   return new Date(date).toLocaleDateString(undefined, defaultOptions);
 };
 
@@ -19,7 +19,7 @@ export const formatDate = (date, options = {}) => {
 export const formatCurrency = (amount, currency = 'USD', locale = 'en-US') => {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
-    currency: currency
+    currency: currency,
   }).format(amount);
 };
 
@@ -39,19 +39,19 @@ export const debounce = (func, wait) => {
 // Throttle function
 export const throttle = (func, limit) => {
   let inThrottle;
-  return function() {
+  return function () {
     const args = arguments;
     const context = this;
     if (!inThrottle) {
       func.apply(context, args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
 };
 
 // Deep clone object
-export const deepClone = (obj) => {
+export const deepClone = obj => {
   if (obj === null || typeof obj !== 'object') return obj;
   if (obj instanceof Date) return new Date(obj.getTime());
   if (obj instanceof Array) return obj.map(item => deepClone(item));
@@ -67,20 +67,22 @@ export const deepClone = (obj) => {
 };
 
 // Capitalize first letter
-export const capitalize = (str) => {
+export const capitalize = str => {
   if (typeof str !== 'string') return str;
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
 // Convert string to camelCase
-export const toCamelCase = (str) => {
-  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
-    return index === 0 ? word.toLowerCase() : word.toUpperCase();
-  }).replace(/\s+/g, '');
+export const toCamelCase = str => {
+  return str
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    })
+    .replace(/\s+/g, '');
 };
 
 // Convert string to kebab-case
-export const toKebabCase = (str) => {
+export const toKebabCase = str => {
   return str
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .replace(/[\s_]+/g, '-')
@@ -88,7 +90,7 @@ export const toKebabCase = (str) => {
 };
 
 // Check if value is empty
-export const isEmpty = (value) => {
+export const isEmpty = value => {
   if (value === null || value === undefined) return true;
   if (typeof value === 'string') return value.trim() === '';
   if (Array.isArray(value)) return value.length === 0;
@@ -102,6 +104,6 @@ export const getRandomNumber = (min, max) => {
 };
 
 // Sleep function (for async operations)
-export const sleep = (ms) => {
+export const sleep = ms => {
   return new Promise(resolve => setTimeout(resolve, ms));
 };
